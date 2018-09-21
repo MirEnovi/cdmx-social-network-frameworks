@@ -4,8 +4,8 @@ import Login from './components/Login/Login';// componente Login
 class App extends Component {
     render() {
         return (
-            <div className="Login">
-                <Login />
+            <div>
+                <Login titulo= {"Inicia Sesion"} />
             </div>
         );                     
     }

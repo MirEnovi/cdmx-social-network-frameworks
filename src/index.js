@@ -7,6 +7,6 @@ import registerServiceWorker from './registerServiceWorker'; // simula servidor
 
 
 //renderizamos App
-ReactDOM.render(<App titulo= {"Inicia Sesion"} />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
