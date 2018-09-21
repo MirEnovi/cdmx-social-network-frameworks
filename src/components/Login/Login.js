@@ -4,9 +4,9 @@ import './Login.css';
 import {Button} from 'react-materialize';
 
 class Login extends Component {
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
   render() {
     return (
       <div className="Login">
