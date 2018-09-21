@@ -2,7 +2,7 @@
   "name": "social-network-react",
   "version": "0.1.0",
   "private": false,
-  "homepage": "ttps://mirenovi.github.io/cdmx-social-network-frameworks",
+  "homepage": "https://mirenovi.github.io/cdmx-social-network-frameworks/public/index.html",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
