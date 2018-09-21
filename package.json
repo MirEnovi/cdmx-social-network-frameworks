@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mirenovi.github.io/cdmx-social-network-frameworks",
   "dependencies": {
+    "firebase": "^5.5.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-materialize": "^2.4.5",

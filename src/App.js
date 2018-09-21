@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Login from './components/Login/Login';// componente Login
+import Login from './components/Login/Login'; // Componente Login
 
 class App extends Component {
     render() {
@@ -7,7 +7,7 @@ class App extends Component {
             <div>
                 <Login titulo= {"Inicia Sesion"} />
             </div>
-        );                     
+        );
     }
 }
 
