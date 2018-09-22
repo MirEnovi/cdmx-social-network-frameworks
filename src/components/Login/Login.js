@@ -40,7 +40,7 @@ class Login extends Component {
           {this.props.titulo}
         </p>
 
-        <Button waves='light' className='indigo darken-4 ' s={4} onClick={this.handleAuthF}>Facebook</Button>
+        <Button waves='light' className='indigo darken-4' s={4} onClick={this.handleAuthF}>Facebook</Button>
 
         <Button waves='light' className='red' s={4} onClick={this.handleAuthG}>Google</Button>
 

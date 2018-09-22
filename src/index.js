@@ -7,15 +7,9 @@ import App from './App'; // Importamos App
 import registerServiceWorker from './registerServiceWorker'; // Simula servidor
 import Firebase from 'firebase'; // Importamos Firebase
 
-// Metodo de Firebase para agregar credenciales
-Firebase.initializeApp({
-    apiKey: "AIzaSyC63unMCxi_u8dtxjfWg70ot0fGpcRKF9E",
-    authDomain: "react-social-network-ef787.firebaseapp.com",
-    databaseURL: "https://react-social-network-ef787.firebaseio.com",
-    projectId: "react-social-network-ef787",
-    storageBucket: "react-social-network-ef787.appspot.com",
-    messagingSenderId: "286421353077"
-})
+import { FirebaseCredentials } from './config/firebaseCredentials'; 
+
+Firebase.initializeApp({ FirebaseCredentials });
 
 //renderizamos App
 ReactDOM.render(<App />, document.getElementById('root'));
