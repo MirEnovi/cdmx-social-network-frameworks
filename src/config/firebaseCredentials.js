@@ -1,3 +1,5 @@
+import firebase from 'firebase'; // Importamos Firebase
+
 // Metodo de Firebase para agregar credenciales
 const firebaseCredentials = {
     apiKey: "AIzaSyC63unMCxi_u8dtxjfWg70ot0fGpcRKF9E",
@@ -8,5 +10,6 @@ const firebaseCredentials = {
     messagingSenderId: "286421353077"
 
 };
+const firebaseInit = firebase.initializeApp(firebaseCredentials);
 
-export default firebaseCredentials
+export default { firebaseInit }
