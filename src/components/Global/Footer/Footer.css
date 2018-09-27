@@ -1,0 +1,10 @@
+.orange-text {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 980px){
+    Footer {
+    position: absolute;
+    left: 0; bottom: 0; right: 0;
+    }
+}
