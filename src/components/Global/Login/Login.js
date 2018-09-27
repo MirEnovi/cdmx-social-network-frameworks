@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../../assets/taco.png'; // Importamos imagen logo
 import './Login.css'; // Importamos estilos
-import {Button} from 'react-materialize'; // importamos elementos de Materialize
-import firebaseInit from '../../config/firebaseCredentials'; // Importamos Firebase
+import {Button, Col, Row} from 'react-materialize'; // importamos elementos de Materialize
+import firebaseInit from '../../../config/firebaseCredentials'; // Importamos Firebase
 
 
 class Login extends Component {
@@ -21,31 +21,36 @@ class Login extends Component {
     }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
   }
   // Función de logouth
-  handleLogouth() {
-    firebaseInit.auth().signOut().then(() => console.log('Desconectado'))
-    .catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
-  }
+  // handleLogouth() {
+  //   firebaseInit.auth().signOut().then(() => console.log('Desconectado'))
+  //   .catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
+  // }
 
   render() {
     return (
       <div className="Login">
         <header>
           <img src={logo} className="Login-logo" alt="logo" />
+          <h1 className="Login-title Login-body">
+            Mexican Food Lovers
+          </h1>
         </header>
         <div>
-        <h1 className="Login-title Login-body">
-          Mexican Food Lovers
-        </h1>
-        <p>
-          {this.props.titulo}
-        </p>
+          <Row className= 'flow-text'>
+            <h6>
+              {this.props.titulo}
+            </h6>
+            <Col s={12} l={6}>
+              <Button waves='light' className='indigo darken-4 ' onClick={this.handleAuthF}>Facebook</Button>
+            </Col>
 
-        <Button waves='light' className='indigo darken-4' s={4} onClick={this.handleAuthF}>Facebook</Button>
-
-        <Button waves='light' className='red' s={4} onClick={this.handleAuthG}>Google</Button>
-
-        <Button waves='light' className='orange darken-2' s={4} onClick={this.handleLogouth}> Salir </Button>
-        
+            <Col s={12} l={6}>
+              <Button waves='light' className='red' onClick={this.handleAuthG}>Google</Button>
+            </Col>
+            {/* <Col s={4}>
+              <Button waves='light' className='orange darken-2' onClick={this.handleLogouth}> Salir </Button>
+            </Col> */}
+          </Row>   
         </div>
       </div>
     );                     

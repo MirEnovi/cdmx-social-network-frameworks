@@ -1,0 +1,9 @@
+Nav{
+    position: absolute;
+    top: 0;
+}
+
+.green-text, .red-text {
+    font-weight: bold;
+    text-align: center;
+}

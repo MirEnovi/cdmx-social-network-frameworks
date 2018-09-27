@@ -1,16 +1,23 @@
 // Apendice de la aplicacion, este archivo no tiene logica
 
 import React from 'react'; // Biblioteca en si
-import ReactDOM from 'react-dom'; // Herramienta para el navegador
+import { render } from 'react-dom'; // Dependencia para el navegador
+import { BrowserRouter as Router } from 'react-router-dom'; // Dependencia para crear rutas
+
+//Routes
+import AppRoutes from './routes';
+
 import './index.css'; // styles de toda la pagina
-import App from './App'; // Importamos App
 import registerServiceWorker from './registerServiceWorker'; // Simula servidor
-import firebase from 'firebase'; // Importamos Firebase
+
+// import firebaseInit from '../../config/firebaseCredentials'; // Importamos Firebase
+
+render(
+    <Router>
+        <AppRoutes />
+    </Router>
+    , document.getElementById('root'));
 
 
-
-
-//renderizamos App
-ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
