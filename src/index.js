@@ -9,10 +9,8 @@ import AppRoutes from './routes';
 import './index.css'; // styles de toda la pagina
 import registerServiceWorker from './registerServiceWorker'; // Simula servidor
 
-// import firebaseInit from '../../config/firebaseCredentials'; // Importamos Firebase
-
 render(
-        <AppRoutes />
+    <AppRoutes />
     , document.getElementById('root'));
 
 

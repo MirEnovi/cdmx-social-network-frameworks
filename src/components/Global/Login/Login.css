@@ -5,7 +5,9 @@
 
 .Login-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 200px;
+  height: 320px;
+  border-radius: 50%;
+  opacity: 0.8;
 }
 
 .Login-title {
@@ -30,6 +32,9 @@
   }
 
   .Login-logo {
-    height: 100px;
+    height: 200px;
+    margin-bottom: 95px;
+    opacity: 0.6;
+
   }
 }

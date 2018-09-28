@@ -9,7 +9,6 @@ import { Row } from 'react-materialize'; // importamos elementos de Materialize
 class NewComent extends Component {
 
   render() {
-    const { body } = this.props;
     return (
       <div className="new-coments">
         <Row className= 'flow-text'>

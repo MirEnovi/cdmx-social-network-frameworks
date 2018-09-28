@@ -1,9 +1,31 @@
-Nav{
-    position: absolute;
-    top: 0;
+Nav {
+  position: absolute;
+  top: 0;
+  height: 75px;
 }
 
-.green-text, .red-text {
+.green-text,
+.red-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.photo-nav {
+  width: 49px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 980px) {
+  .photo-nav {
+    /* border-bottom: 20px; */
+    opacity: .5;
+    width: 180px;
+    border-radius: 80%;
+  }
+  /* .green-text,
+  .red-text {
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-}
+  }*/
+} 

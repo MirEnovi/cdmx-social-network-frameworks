@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
+// Componente principal, renderea los componentes segun la vista
+
+// Dependencias
+import React, { Component } from 'react'; 
 import PropTypes from 'prop-types';
 
-// import Nav from './Global/Nav/Nav'; // Importamos componente Nav
 import FooterC from './Global/Footer/Footer'; // Importamos comp Footer
 import Content from './Global/Content/content'; // Importamos componente NewComent
-
-//Data
-// import items from '../data/menu';
+import './App.css'; // styles de toda la pagina
 
 class App extends Component {
-    static PropTypes = {
-        children: PropTypes.object.isRequired
-    };
-    
-    render() {
-        const { children } = this.props;
-        return (
-            <div>
-                <Content body={ children } />
-                <FooterC />
-            </div>
-        );
-    }
+
+	static PropTypes = {
+			children: PropTypes.object.isRequired
+	};
+
+	render() {
+		const { children } = this.props;
+		return (
+			<div>
+				<Content body={ children } />
+				<FooterC />
+			</div>
+		);
+	}
 }
 
 export default App;
