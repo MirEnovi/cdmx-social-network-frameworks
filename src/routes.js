@@ -16,7 +16,8 @@ const AppRoutes = () => {
             <Route path = '/' component = { Login } exact />
             <Route path = '/muro' component = { Muro } exact />
             <Route path = '/perfil' component = { Perfil } exact />
-            <Route component = { Page404 } />
+            <Route path='/404' component={Page404} />
+            <Redirect from='*' to='/404' />
         </Switch>
     </App>
     )

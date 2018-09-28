@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 import logo from '../../assets/taco.png'; // Importamos imagen logo
 import './Login.css'; // Importamos estilos
 import {Button, Col, Row} from 'react-materialize'; // importamos elementos de Materialize
+import firebase from 'firebase'; // Importamos Firebase
 import firebaseInit from '../../../config/firebaseCredentials'; // Importamos Firebase
 
 
 class Login extends Component {
+  // constructor()
+
   // Función de login con Google
   handleAuthG() {
-    const provider = new firebaseInit.auth.GoogleAuthProvider();
-    firebaseInit.auth().signInWithPopup(provider).then((result) => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then((result) => {
         return console.log(`${result.user.email} ha iniciado sesión`);
     }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
   }
   // Función de login con Facebook
   handleAuthF() {
-    const provider = new firebaseInit.auth.FacebookAuthProvider();
-    firebaseInit.auth().signInWithPopup(provider).then((result) => {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then((result) => {
         return console.log(`${result.user.email} ha iniciado sesión`);
     }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
   }
