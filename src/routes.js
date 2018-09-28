@@ -1,6 +1,6 @@
 // Dependencias
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
 
 // Components
 import App from './components/App';
@@ -12,13 +12,13 @@ import Page404 from './components/Page404';
 const AppRoutes = () => {
     return (
     <App>
-        <Switch>
-            <Route path = '/' component = { Login } exact />
-            <Route path = '/muro' component = { Muro } exact />
-            <Route path = '/perfil' component = { Perfil } exact />
-            <Route path='/404' component={Page404} />
-            <Redirect from='*' to='/404' />
-        </Switch>
+        <BrowserRouter basename="process.env.PUBLIC_URL">
+            <Switch>
+                <Route path = '/' component = { Login } exact />
+                <Route path = '/muro' component = { Muro } exact />
+                <Route path = '/perfil' component = { Perfil } exact />
+            </Switch>
+        </BrowserRouter>
     </App>
     )
 }
