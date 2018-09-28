@@ -4,6 +4,7 @@ import firebase from 'firebase'; // Importamos Firebase
 import firebaseInit from '../../config/firebaseCredentials'; // 
 
 import Nav from '../Global/Nav/Nav'; // Importamos componente Nav
+import CardPerfil from '../Global/CardPerfil/CardPerfil'; // Importamos componente CardPerfil
 
 //Data
 import items from '../../data/menu';
@@ -30,9 +31,8 @@ class Perfil extends Component {
       return (
         <div className='Perfil'>
           <Nav title = 'Mexican Food Lovers' items = { items } />
-          <h1>
-            Perfil Page
-          </h1>
+          
+          <CardPerfil/>
         </div>
       );
     } else {

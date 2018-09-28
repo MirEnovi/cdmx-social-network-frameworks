@@ -52,7 +52,6 @@ class Login extends Component {
     }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
   }
 
-
   render() {
     if(this.state.user) {
 			return <Redirect to = '/muro'/>
@@ -61,9 +60,6 @@ class Login extends Component {
         <div className="Login">
           <header>
             <img src={logo} className="Login-logo" alt="logo" />
-            <h2 className="Login-title Login-body">
-              Mexican Food Lovers 
-            </h2>
           </header>
           <div>
           <Row className= 'flow-text'>
@@ -75,7 +71,7 @@ class Login extends Component {
             </Col>
 
             <Col s={12} l={6}>
-              <Button waves='light' className='red' onClick={this.handleAuthG}>Google</Button>
+              <Button waves='light' className='red darken-4' onClick={this.handleAuthG}>Google</Button>
             </Col>
           </Row>   
           </div>

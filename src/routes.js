@@ -1,3 +1,5 @@
+// File que importa todas vistas que tendra el proyecto y las vincula con sus pths
+
 // Dependencias
 import React from 'react';
 import {
@@ -6,7 +8,7 @@ import {
 	BrowserRouter
 } from 'react-router-dom';
 
-// Components
+// Componentes
 import App from './components/App';
 import Login from './components/LoginPage'; // Componente Login
 import Muro from './components/Muro';
@@ -14,7 +16,6 @@ import Perfil from './components/Perfil'
 import Page404 from './components/Page404';
 
 const AppRoutes = () => {
-    
 	return (
 	<App>
 		<BrowserRouter basename={process.env.PUBLIC_URL}>

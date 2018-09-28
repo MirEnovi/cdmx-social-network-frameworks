@@ -30,20 +30,14 @@ class Muro extends Component {
   render() {
     if(this.state.user) {
 			return (
-      <div className='Muro'>
-        <Nav title = 'Mexican Food Lovers' items = { items } />
-        <NewComent/>
-      </div>
+        <div className='Muro'>
+          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} items = { items } />
+          <NewComent/>
+        </div>
       )
-		} else {
+    } else {
       return <Redirect to = '/'/>;
-      };
-    // return (
-    //   <div className='Muro'>
-    //     <Nav title = 'Mexican Food Lovers' items = { items } />
-    //     <NewComent/>
-    //   </div>
-    //   )
+    };
   }
 }
 
