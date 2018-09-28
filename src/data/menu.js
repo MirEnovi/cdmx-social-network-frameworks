@@ -7,8 +7,8 @@ export default [
         title: 'Perfil',
         url: '/perfil'
     },
-    {
-        title: 'Salir',
-        url: '/'
-    }
+    // {
+    //     title: 'Salir',
+    //     url: '/'
+    // }
 ]
