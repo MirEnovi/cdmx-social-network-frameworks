@@ -66,6 +66,7 @@ class Login extends Component {
             <h6>
               {this.props.titulo}
             </h6>
+
             <Col s={12} l={6}>
               <Button waves='light' className='indigo darken-4 ' onClick={this.handleAuthF}>Facebook</Button>
             </Col>

@@ -19,7 +19,7 @@ class Muro extends Component {
   componentWillMount = () => {
     const user = firebase.auth().currentUser;
     if (user) {   
-      console.log(user);
+      // console.log(user);
       this.setState({
         user
       })
@@ -31,7 +31,9 @@ class Muro extends Component {
     if(this.state.user) {
 			return (
         <div className='Muro'>
-          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} items = { items } />
+          <header>
+          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email}items = { items } />
+          </header>
           <NewComent/>
         </div>
       )

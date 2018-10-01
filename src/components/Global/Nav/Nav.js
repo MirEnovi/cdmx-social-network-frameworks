@@ -6,18 +6,16 @@ import firebaseInit from '../../../config/firebaseCredentials'; // Importamos Fi
 
 
 import './Nav.css'; // Importamos estilos
+import Logo from '../../assets/taco.png'
 
-import {
-	Navbar,
-	NavItem,
-	Row
-} from 'react-materialize'; // importamos elementos de Materialize
+import { Navbar, NavItem, Row, Col, SideNav, SideNavItem, Button } from 'react-materialize'; // importamos elementos de Materialize
 
 class Nav extends Component {
 	static PropTypes = {
 		title: PropTypes.string.isRequired,
-		photo: PropTypes.string,
-		items: PropTypes.array.isRequired
+    photo: PropTypes.string,
+    email: PropTypes.string,
+		items: PropTypes.array
 	}
 //	Función de logouth
 	handleLogouth = () => {
@@ -29,31 +27,40 @@ class Nav extends Component {
 		const {
 			title,
 			photo,
-			items,
+      items,
+      email,
 		} = this.props;
 
 		return (
 			<header className='Nav'>
-				<Row>
-					<Navbar right className= 'orange lighten-3' >
+				<nav left fixed= 'bool'>
+					<Row className='valign-wrapper'>
+            <img src={Logo} className="logo" alt="logo" />	
 
-						<NavItem>
-							<img className = 'photo-nav' src={ photo }/>
-						</NavItem>
+            <SideNav
+            trigger={<img className = 'photo-nav valign-wrapper' src={ photo }/>}
+            options={{ closeOnClick: true }}
+            >
+              <SideNavItem >
+                <img src={photo} className = 'photo-user' alt= {title} />
+              </SideNavItem>
+              <SideNavItem className = 'user-name'> {title}</SideNavItem>
+              <SideNavItem > {email} </SideNavItem>
 
-						<NavItem>
-							<h5 className='red-text'> Bienvenidx {title} </h5>
-						</NavItem>
+              <SideNavItem divider />
+              <SideNavItem subheader> One Food Lover </SideNavItem>
+            </SideNav>
 
-						{items && items.map((item,key) => {
-							return <NavItem key={key}> <span className='green-text'> <Link to = {item.url}>{item.title}</Link> </span></NavItem>
-						})}
-						
-						<NavItem onClick={this.handleLogouth}>
-							<span className='green-text'> <Link to = '/'> Salir</Link></span>
-						</NavItem>
-					</Navbar>
-				</Row>
+              <h5 className = 'welcome-text'> Bienvenidx {title} </h5>	
+
+            <Col sl={1} className='grid-example'>
+              <Button className='brown darken-3' onClick={this.handleLogouth}>
+                <Link to = '/'> Salir</Link>
+              </Button>
+            </Col>
+					</Row>
+				</nav>
+
 			</header>
 		)
 	}
