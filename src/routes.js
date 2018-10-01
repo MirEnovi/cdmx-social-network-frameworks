@@ -1,4 +1,4 @@
-// File que importa todas vistas que tendra el proyecto y las vincula con sus pths
+// File que importa todas vistas que tendra el proyecto y las vincula con sus paths
 
 // Dependencias
 import React from 'react';

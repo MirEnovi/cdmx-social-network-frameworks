@@ -1,3 +1,4 @@
+// Componente que retorna el contenido del Body.
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 

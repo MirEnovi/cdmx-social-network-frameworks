@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import FooterC from './Global/Footer/Footer'; // Importamos comp Footer
 import Content from './Global/Content/content'; // Importamos componente NewComent
-import './App.css'; // styles de toda la pagina
+import './App.css'; // Estilos de toda la pagina
 
 class App extends Component {
 

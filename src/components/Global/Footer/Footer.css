@@ -1,6 +1,8 @@
-.orange-text {
+.brown-text {
     font-weight: bold;
+    text-shadow: 3px 2px 3px rgba(255,255,255,.2);
 }
+
 
 @media screen and (max-width: 980px){
     Footer {
