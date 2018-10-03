@@ -3,7 +3,9 @@ import './NewComents.css'; // Importamos estilos
 import { Row, Col, Button } from 'react-materialize'; // importamos elementos de Materialize
 
 
+import firebase from 'firebase'; // Importamos Firebase
 // import firebaseInit from '../../config/firebaseCredentials'; // Importamos Firebase
+// import db from '../../../config/firebaseCredentials'; // Importamos Firebase
 
 
 class NewComent extends Component {

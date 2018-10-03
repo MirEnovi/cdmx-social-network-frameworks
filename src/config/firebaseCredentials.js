@@ -11,5 +11,6 @@ const firebaseCredentials = {
 
 };
 const firebaseInit = firebase.initializeApp(firebaseCredentials);
+const db = firebase.firestore();
 
-export default { firebaseInit }
+export default { firebaseInit, db }

@@ -33,31 +33,34 @@ class Nav extends Component {
 
 		return (
 			<header className='Nav'>
-				<nav left fixed= 'bool'>
+				<nav fixed= 'bool'>
 					<Row className='valign-wrapper'>
-            <img src={Logo} className="logo" alt="logo" />	
-
             <SideNav
             trigger={<img className = 'photo-nav valign-wrapper' src={ photo }/>}
             options={{ closeOnClick: true }}
             >
-              <SideNavItem >
-                <img src={photo} className = 'photo-user' alt= {title} />
-              </SideNavItem>
-              <SideNavItem className = 'user-name'> {title}</SideNavItem>
-              <SideNavItem > {email} </SideNavItem>
+              <div className = 'background'>
+                <SideNavItem>
+                  <img src={photo} className = 'photo-user ' alt= {title} />
+                </SideNavItem>
+                <SideNavItem className = 'user-name'> 
+                <h5 className = 'lime-text text-lighten-5 brown-nav-text'>{title}</h5>
+                </SideNavItem>
+                <SideNavItem > <h6 className = 'lime-text text-lighten-5 brown-nav-text'>{email}</h6> </SideNavItem>
+              </div>
 
               <SideNavItem divider />
               <SideNavItem subheader> One Food Lover </SideNavItem>
+              <SideNavItem subheader> 
+                <a class="col s12 waves-effect waves-light btn red lighten-2" onClick={this.handleLogouth}> <Link className = 'lime-text text-lighten-5 brown-nav-text' to = '/'>Salir</Link> </a>
+              </SideNavItem>
             </SideNav>
+            <h5 className = 'welcome-text'> Bienvenidx {title} </h5>
+            <a className='exit' onClick={this.handleLogouth}>
+              <Link to = '/'>Salir</Link>
+            </a>
+            <img src={Logo} className="logo" alt="logo" />
 
-              <h5 className = 'welcome-text'> Bienvenidx {title} </h5>	
-
-            <Col sl={1} className='grid-example'>
-              <Button className='brown darken-3' onClick={this.handleLogouth}>
-                <Link to = '/'> Salir</Link>
-              </Button>
-            </Col>
 					</Row>
 				</nav>
 
