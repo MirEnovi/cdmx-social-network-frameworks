@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import firebase from 'firebase'; // Importamos Firebase
-import firebaseInit from '../../config/firebaseCredentials'; // Importamos Firebase
 
-import Nav from '../Global/Nav/Nav'; // Importamos componente Nav
-import NewComent from '../Global/NewComents/NewComents'; // Importamos componente Nav
+
+// Importamos componentes
+import Nav from '../Global/Nav/Nav'; 
+import NewComent from '../Global/NewComents/NewComents'; 
+import Coments from '../Global/Coments/Coments';
 
 //Data
 import items from '../../data/menu';
@@ -14,16 +16,27 @@ class Muro extends Component {
     super()
     this.state = { 
       user: null,
+      // coments : [],
+			newComent:'',
     }
   }
   componentWillMount = () => {
     const user = firebase.auth().currentUser;
     if (user) {   
-      // console.log(user);
       this.setState({
         user
       })
     }
+  }
+
+  onInputChange = (valorNewComent) => {
+    this.setState({
+      nameComent: valorNewComent
+    })
+  }
+
+  onSubmit = () => {
+
   }
   
   
@@ -34,12 +47,17 @@ class Muro extends Component {
           <header>
           <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email}items = { items } />
           </header>
-          <NewComent/>
+
+          <NewComent nameTask={this.state.newComent}
+                  onInputChange={this.onInputChange}
+                  onSubmit={this.onSubmit}
+          />
+          <Coments contentComent = {this.state}/>
         </div>
       )
     } else {
       return <Redirect to = '/'/>;
-    };
+    }
   }
 }
 

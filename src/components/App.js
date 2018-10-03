@@ -9,11 +9,9 @@ import Content from './Global/Content/content'; // Importamos componente NewCome
 import './App.css'; // Estilos de toda la pagina
 
 class App extends Component {
-
 	static PropTypes = {
 			children: PropTypes.object.isRequired
 	};
-
 	render() {
 		const { children } = this.props;
 		return (

@@ -51,7 +51,7 @@ class Nav extends Component {
 
               <SideNavItem divider />
               <SideNavItem subheader> One Food Lover </SideNavItem>
-              <SideNavItem subheader> 
+              <SideNavItem subheader className='exit-nav'> 
                 <a class="col s12 waves-effect waves-light btn red lighten-2" onClick={this.handleLogouth}> <Link className = 'lime-text text-lighten-5 brown-nav-text' to = '/'>Salir</Link> </a>
               </SideNavItem>
             </SideNav>

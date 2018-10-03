@@ -43,6 +43,10 @@ Nav {
   text-shadow: 3px 2px 3px rgb(44, 21, 21);
 }
 
+.exit-nav {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .photo-nav {
     float: right;
@@ -70,5 +74,8 @@ Nav {
   }
   .exit {
     display: none;
+  }
+  .exit-nav {
+    display: block;
   }
 }
