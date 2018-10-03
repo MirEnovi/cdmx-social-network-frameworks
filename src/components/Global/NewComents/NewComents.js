@@ -22,7 +22,7 @@ class NewComent extends Component {
           <Col offset='s2' s={8}>
             <form onSubmit={this.onSubmit}>
               <input placeholder= 'Escribe un Comentario' value={this.props.newComent} onChange={this.onChange}/>
-              <Button type='submit' waves='light' className= 'green lighten-2'> Nuevo Comentario </Button>
+              <Button type='submit' waves='light' className= 'green lighten-2'> Publicar </Button>
             </form>
           </Col>
       </Row>

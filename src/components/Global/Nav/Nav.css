@@ -29,7 +29,7 @@ Nav {
   margin-top: 150px;
 }
 
-.welcome-text {
+.name-text {
   margin-right: 230px;
   float: left;
 }
@@ -54,9 +54,9 @@ Nav {
   }
   .logo {
     float: left;
-    margin-left: 150px;
+    margin-left: 120px;
   }
-  .welcome-text, .exit {
+  .name-text, .exit {
     display: none;
   }
 }
@@ -65,11 +65,11 @@ Nav {
   .photo-nav, .logo {
     float: right;
   }
-  .photo-nav, .welcome-text {
+  .photo-nav, .name-text {
     margin-left: 50px;
     margin-right: 60px;
   }
-  .photo-nav, .welcome-text, .logo {
+  .photo-nav, .name-text, .logo {
     margin-top: 8px;
   }
   .exit {
