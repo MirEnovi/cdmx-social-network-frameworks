@@ -8,7 +8,7 @@ import firebaseInit from '../../../config/firebaseCredentials'; // Importamos Fi
 import './Nav.css'; // Importamos estilos
 import Logo from '../../assets/taco.png'
 
-import { Navbar, NavItem, Row, Col, SideNav, SideNavItem, Button } from 'react-materialize'; // importamos elementos de Materialize
+import { Row, SideNav, SideNavItem, Button } from 'react-materialize'; // importamos elementos de Materialize
 
 class Nav extends Component {
 	static PropTypes = {
@@ -27,7 +27,7 @@ class Nav extends Component {
 		const {
 			title,
 			photo,
-      items,
+      // items,
       email,
 		} = this.props;
 
