@@ -25,7 +25,7 @@ los que trabajes.
 # **Red Social**
 ## **Mexican Food Lovers**
 ### **The biggest Mexican Food Lovers Community**
-![alt text](imagenes/logo.jpg)
+![alt text](src/components/assets/logo.png)
 
 Una red social, para encontrar y compartir recetas y lugares de comida mexicana.
 
@@ -40,17 +40,17 @@ __Encuestas__
 Se realizaron un par de encuestas para definir mejor las nececidades de nuestrxs usuarixs potenciales.
 Estas son las graficas iniciales.
 
-![alt text](imagenes/Encuesta1.jpg)
-![alt text](imagenes/Encuesta2.jpg)
-![alt text](imagenes/Encuesta3.jpg)
-![alt text](imagenes/Encuesta4.jpg)
+![alt text](src/components/assets/Encuesta1.jpg)
+![alt text](src/components/assets/Encuesta2.jpg)
+![alt text](src/components/assets/Encuesta3.jpg)
+![alt text](src/components/assets/Encuesta4.jpg)
 
 Las siguientes encuestas mostraron una tendencia hacia los mismos resultados.
 
-![alt text](imagenes/Encuesta1a.jpg)
-![alt text](imagenes/Encuesta2a.jpg)
-![alt text](imagenes/Encuesta3a.jpg)
-![alt text](imagenes/Encuesta4a.jpg)
+![alt text](src/components/assets/Encuesta1a.jpg)
+![alt text](src/components/assets/Encuesta2a.jpg)
+![alt text](src/components/assets/Encuesta3a.jpg)
+![alt text](src/components/assets/Encuesta4a.jpg)
 
 __Demanda de Mercado para la Comida:__
 
@@ -115,7 +115,7 @@ Nuestra propuesta se trata de una red social de gente experta y amateurs en el t
 __Primer Sketch (baja fidelidad)__
 
 Nuestro primer bosquejo:
-![alt text](imagenes/scketchbf.jpg)
+![alt text](src/components/assets/scketchbf.jpg)
 
 
 __Prototipo (Alta fidelidad)__
@@ -123,13 +123,13 @@ __Prototipo (Alta fidelidad)__
 Esta fue nuestra primera propuesta.
 
 
-![alt text](imagenes/protA1.jpeg)
+![alt text](src/components/assets/protA1.jpeg)
 
-![alt text](imagenes/protA2.jpeg)
+![alt text](src/components/assets/protA2.jpeg)
 
-![alt text](imagenes/protA3.jpeg)
+![alt text](src/components/assets/protA3.jpeg)
 
-![alt text](imagenes/protA4.jpeg)
+![alt text](src/components/assets/protA4.jpeg)
 
 Despues de la primera entrevista con el inversionista, nuestra propuesta, que iba más orientada a comida saludable, cambio y este es el prototipo que surgio de las nuevas ideas:
 [Segundo Prototipo de Alta Fidelidad](https://marvelapp.com/183635ig).
@@ -141,7 +141,7 @@ Consideramos que estetica y limpia sin llegar a la formaidad que no queremos tra
 
 La paleta de colores elegida es la siguiente:
 
-![alt text](imagenes/palet_de-colores.jpg)
+![alt text](src/components/assets/palet_de-colores.jpg)
 
 
 

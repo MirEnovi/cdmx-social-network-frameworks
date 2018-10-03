@@ -36,7 +36,7 @@ class Nav extends Component {
 				<nav fixed= 'bool'>
 					<Row className='valign-wrapper'>
             <SideNav
-            trigger={<img className = 'photo-nav valign-wrapper' src={ photo }/>}
+            trigger={<a><i class="large material-icons">dehaze</i></a>}
             options={{ closeOnClick: true }}
             >
               <div className = 'background'>
@@ -55,7 +55,8 @@ class Nav extends Component {
                 <a class="col s12 waves-effect waves-light btn red lighten-2" onClick={this.handleLogouth}> <Link className = 'lime-text text-lighten-5 brown-nav-text' to = '/'>Salir</Link> </a>
               </SideNavItem>
             </SideNav>
-            <h5 className = 'welcome-text'> Bienvenidx {title} </h5>
+            <img className = 'photo-nav valign-wrapper' src={ photo }/>
+            <h5 className = 'name-text'> {title} </h5>
             <a className='exit' onClick={this.handleLogouth}>
               <Link to = '/'>Salir</Link>
             </a>
