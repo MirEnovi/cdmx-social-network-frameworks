@@ -8,11 +8,10 @@ import {
 	BrowserRouter
 } from 'react-router-dom';
 
-// Componentes
-import App from './components/App';
-import Login from './components/LoginPage'; // Componente Login
-import Muro from './components/Muro';
-import Perfil from './components/Perfil'
+// Componentes de vistas
+import App from './components/App'; // Componente Principal
+import Login from './components/LoginPage';
+import Muro from './components/Muro'; 
 import Page404 from './components/Page404';
 
 const AppRoutes = () => {
@@ -22,7 +21,6 @@ const AppRoutes = () => {
 			<Switch>
 				<Route path = '/' component = { Login } exact />
 				<Route path = '/muro' component = { Muro } exact />
-				<Route path = '/perfil' component = { Perfil } exact />
 				<Route component = { Page404 } />
 			</Switch>
 		</BrowserRouter>

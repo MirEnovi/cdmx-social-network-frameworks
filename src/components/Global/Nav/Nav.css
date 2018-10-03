@@ -10,12 +10,14 @@ Nav {
   width: 50px;
   border-radius: 50%;
   margin-left: 100px;
-  margin-right: 30px;
+  margin-right: 80px;
+  margin-top: 5px;
 }
 
 .logo {
   width: 60px;
-  margin-right: 350px;
+  margin-right: 50px;
+  float: right;
 }
 
 .photo-user {
@@ -27,21 +29,46 @@ Nav {
   margin-top: 150px;
 }
 
-@media screen and (max-width: 1000px) {
-  .photo-nav, .logo {
-    width: 50px;
-    margin-right: 20px;
-    margin-left: 35px;   
+.welcome-text {
+  margin-right: 230px;
+  float: left;
+}
+
+.background {
+  background-image: url('../../assets/background-zarape.jpg')
+}
+
+.brown-nav-text {
+  font-weight: bold;
+  text-shadow: 3px 2px 3px rgb(44, 21, 21);
+}
+
+@media screen and (max-width: 600px) {
+  .photo-nav {
+    float: right;
+
   }
-  .welcome-text {
+  .logo {
+    float: left;
+    margin-left: 150px;
+  }
+  .welcome-text, .exit {
     display: none;
   }
 }
 
-/* @media screen and (max-width: 980px) {
-  .photo-nav {
-    text-align: center;
-    width: 180px;
-    border-radius: 80%;
+@media screen and (max-width: 900px) {
+  .photo-nav, .logo {
+    float: right;
   }
-}  */
+  .photo-nav, .welcome-text {
+    margin-left: 50px;
+    margin-right: 60px;
+  }
+  .photo-nav, .welcome-text, .logo {
+    margin-top: 8px;
+  }
+  .exit {
+    display: none;
+  }
+}
