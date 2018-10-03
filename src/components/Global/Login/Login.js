@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import {Button, Col, Row} from 'react-materialize'; // importamos elementos de Materialize
 
 import firebase from 'firebase'; // Importamos Firebase
-import firebaseInit from '../../../config/firebaseCredentials'; // Importamos Firebase
+
 
 import './Login.css'; // Importamos estilos
 import logo from '../../assets/taco.png'; // Importamos imagen logo

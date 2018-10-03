@@ -10,7 +10,7 @@ const firebaseCredentials = {
   messagingSenderId: "286421353077"
 
 };
-const firebaseInit = firebase.initializeApp(firebaseCredentials);
+firebase.initializeApp(firebaseCredentials);
 const db = firebase.firestore();
 
-export default { firebaseInit, db }
+export default { firebase, db }
