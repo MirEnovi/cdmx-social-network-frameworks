@@ -3,7 +3,7 @@ import React from 'react';
 import './Coments.css';
 
 const Coments = (props) => {  
-  console.log(props.contentComent.user.displayName);
+  console.log(props.contentComent.user);
   return (
 		<div class="row center-align">
 			<div class="col s12 m8 offset-m2">
