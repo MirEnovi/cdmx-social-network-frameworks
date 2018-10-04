@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import firebase from 'firebase'; // Importamos Firebase
+// import db from '../../config/firebaseCredentials'
 
 
 // Importamos componentes
@@ -29,14 +30,27 @@ class Muro extends Component {
     }
   }
 
+  
   onInputChange = (valorNewComent) => {
     this.setState({
       nameComent: valorNewComent
     })
   }
 
+  
   onSubmit = () => {
-
+    const db = firebase.firestore();
+    db.collection("coments").add({
+    first: "mir",
+    last: "Lovelace",
+    born: 1815
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+  });
   }
   
   
@@ -45,7 +59,7 @@ class Muro extends Component {
 			return (
         <div className='Muro'>
           <header>
-          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email}items = { items } />
+          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email} items = { items } />
           </header>
 
           <NewComent nameTask={this.state.newComent}

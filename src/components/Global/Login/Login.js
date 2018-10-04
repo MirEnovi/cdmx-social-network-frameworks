@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom';
 import {Button, Col, Row} from 'react-materialize'; // importamos elementos de Materialize
 
 import firebase from 'firebase'; // Importamos Firebase
+import { Firebase, db } from '../../../config/firebaseCredentials';
+
 
 
 import './Login.css'; // Importamos estilos
@@ -12,10 +14,14 @@ import logo from '../../assets/taco.png'; // Importamos imagen logo
 
 
 class Login extends Component {
-  constructor () {
-    super()
-    this.state = { 
-      user: null,
+  constructor (props) {
+    super(props)
+    this.state = {
+      user: null
+      // userName: '',
+      // email: '',
+      // photo: '',
+      // userUid: '',
     }
   }
 
@@ -23,34 +29,14 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({
         user
+        // userName: user.displayName,
+        // email: user.email,
+        // photo: user.photoURL,
+        // userUid: user.uid,
       })
     })
   }
 
-  // Función de login con Google
-  handleAuthG = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-    .then((result) => {
-      console.log(result.user); 
-      console.log(result.user.displayName);
-      console.log(result.user.photoURL);
-      
-      return console.log(`${result.user.email} ha iniciado sesión`);
-    }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
-  }
-  // Función de login con Facebook
-  handleAuthF = () => {
-    const provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-    .then((result) => {
-      console.log(result.user); 
-      console.log(result.user.displayName);
-      console.log(result.user.photoURL);
-
-      return console.log(`${result.user.email} ha iniciado sesión`);
-    }).catch((error) => console.log(`Error: ${error.code}: ${error.message}`));
-  }
 
   render() {
     if(this.state.user) {
@@ -63,16 +49,12 @@ class Login extends Component {
           </header>
           <div>
           <Row className= 'flow-text'>
-            <h6>
-              {this.props.titulo}
-            </h6>
-
             <Col s={12} l={6}>
-              <Button waves='light' className='indigo darken-4 ' onClick={this.handleAuthF}>Facebook</Button>
+              <Button waves='light' className='indigo darken-4 ' onClick={this.props.facebook}>Facebook</Button>
             </Col>
 
             <Col s={12} l={6}>
-              <Button waves='light' className='red darken-4' onClick={this.handleAuthG}>Google</Button>
+              <Button waves='light' className='red darken-4' onClick={this.props.google}>Google</Button>
             </Col>
           </Row>   
           </div>

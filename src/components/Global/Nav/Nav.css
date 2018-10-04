@@ -1,24 +1,18 @@
 Nav {
   height: 70px;
   text-align: center;
-  background-color: #9E4F14;
-  color: #FAF889;;
+  background-color: #F34B42;
+  color: #FAF889;
+  margin-left: 1px;
 }
 
 
 .photo-nav, .logo {
   width: 50px;
   border-radius: 50%;
-  margin-left: 100px;
-  margin-right: 80px;
-  margin-top: 5px;
+
 }
 
-.logo {
-  width: 60px;
-  margin-right: 50px;
-  float: right;
-}
 
 .photo-user {
   width: 150px;
@@ -30,7 +24,7 @@ Nav {
 }
 
 .name-text {
-  margin-right: 230px;
+  /* margin-right: 230px; */
   float: left;
 }
 
@@ -43,18 +37,23 @@ Nav {
   text-shadow: 3px 2px 3px rgb(44, 21, 21);
 }
 
-.exit-nav {
+/* .exit-nav {
   display: none;
+} */
+.margin {
+  margin-left: 20px;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 500px) {
   .photo-nav {
     float: right;
+    margin-left: 120px;
 
   }
   .logo {
     float: left;
-    margin-left: 120px;
+    margin-left: 30px;
   }
   .name-text, .exit {
     display: none;
@@ -62,13 +61,6 @@ Nav {
 }
 
 @media screen and (max-width: 900px) {
-  .photo-nav, .logo {
-    float: right;
-  }
-  .photo-nav, .name-text {
-    margin-left: 50px;
-    margin-right: 60px;
-  }
   .photo-nav, .name-text, .logo {
     margin-top: 8px;
   }

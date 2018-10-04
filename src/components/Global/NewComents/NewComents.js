@@ -5,9 +5,9 @@ import { Row, Col, Button } from 'react-materialize'; // importamos elementos de
 
 
 class NewComent extends Component {
-  constructor(props){
-		super(props)
-	}
+  // constructor(props){
+	// 	super(props)
+	// }
 	onChange = (e) =>{
     // console.log(e.target.value);    
 		this.props.onInputChange(e.target.value)
