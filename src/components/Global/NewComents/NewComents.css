@@ -1,4 +1,8 @@
 .inputComent {
-  margin-top: 45px;
-  height: 50vh;
+  height: 20vh;
+  /* margin-top: 150px; */
+}
+
+.margin-button{
+  margin-top: 10px;
 }

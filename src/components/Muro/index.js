@@ -10,63 +10,107 @@ import NewComent from '../Global/NewComents/NewComents';
 import Coments from '../Global/Coments/Coments';
 
 //Data
-import items from '../../data/menu';
+// import items from '../../data/menu';
 
 class Muro extends Component {
   constructor () {
     super()
     this.state = { 
       user: null,
-      // coments : [],
+      userComent : [],
 			newComent:'',
     }
   }
   componentWillMount = () => {
+    console.log('componentWillMount ');
     const user = firebase.auth().currentUser;
     if (user) {   
-      this.setState({
-        user
-      })
+      this.setState({ user })
     }
   }
 
+  componentDidMount  = () => {
+    const db = firebase.firestore();
+    const comentsRef = db.collection('coments');
+    comentsRef.onSnapshot((querySnapshot) => {
+      const arrUserComent = [];
+      querySnapshot.forEach((doc) => {
+        const objComent = {
+          coment: doc.data().coment,
+          photo: doc.data().photo,
+          user: doc.data().user,
+          userUid: doc.data().userUid,
+          comentUid: doc.data().comentUid,
+        }
+        arrUserComent.push(objComent);
+      })
+      // console.log(arrUserComent);
+      this.setState({
+        userComent: arrUserComent
+      })
+    })
+  }
   
-  onInputChange = (valorNewComent) => {
+  onTextChange = (valorNewComent) => {
     this.setState({
-      nameComent: valorNewComent
+      newComent: valorNewComent
     })
   }
 
   
   onSubmit = () => {
+    const { user, newComent } = this.state;
     const db = firebase.firestore();
-    db.collection("coments").add({
-    first: "mir",
-    last: "Lovelace",
-    born: 1815
-  })
-  .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-  })
-  .catch(function(error) {
-    console.error("Error adding document: ", error);
-  });
+    const n = new Date();
+    const times = n.getTime();
+    const userComentRef = db.collection('coments').doc(`${times}-${user.uid}`);
+    const userComent = {
+      time: times,
+      user: user.displayName,
+      photo: user.photoURL,
+      userUid: user.uid,
+      coment: newComent,
+      comentUid: `${times}-${user.uid}`,
+    }
+    return (
+      userComentRef.set(userComent).then(() => {
+        console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    })
+    )
   }
   
+  deleteComent = (userUid, comentUid) => {
+    if (userUid === this.state.user.uid){
+      const db = firebase.firestore();
+      const comentsRef = db.collection('coments');
+      comentsRef.doc(comentUid).delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+    } else {
+      alert('No puedes borrar este comentario')
+    }
+  }
   
   render() {
     if(this.state.user) {
 			return (
         <div className='Muro'>
           <header>
-          <Nav title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email} items = { items } />
+          <Nav  title = {this.state.user.displayName} photo = {this.state.user.photoURL} email = {this.state.user.email} />
           </header>
 
-          <NewComent nameTask={this.state.newComent}
-                  onInputChange={this.onInputChange}
-                  onSubmit={this.onSubmit}
+          <NewComent  newComent = {this.state.newComent}
+                      onTextChange = {this.onTextChange}
+                      onSubmit = {this.onSubmit}
           />
-          <Coments contentComent = {this.state}/>
+          
+          <Coments Coments = {this.state.userComent}
+                    delete = {this.deleteComent}/>
         </div>
       )
     } else {

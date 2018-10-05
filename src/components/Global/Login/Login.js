@@ -18,10 +18,6 @@ class Login extends Component {
     super(props)
     this.state = {
       user: null
-      // userName: '',
-      // email: '',
-      // photo: '',
-      // userUid: '',
     }
   }
 
@@ -29,10 +25,6 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({
         user
-        // userName: user.displayName,
-        // email: user.email,
-        // photo: user.photoURL,
-        // userUid: user.uid,
       })
     })
   }
@@ -48,12 +40,12 @@ class Login extends Component {
             <img src={logo} className="Login-logo" alt="logo" />
           </header>
           <div>
-          <Row className= 'flow-text'>
-            <Col s={12} l={6}>
+          <Row className= 'flow-text '>
+            <Col s={12} m={6}>
               <Button waves='light' className='indigo darken-4 ' onClick={this.props.facebook}>Facebook</Button>
             </Col>
 
-            <Col s={12} l={6}>
+            <Col s={12} m={6}>
               <Button waves='light' className='red darken-4' onClick={this.props.google}>Google</Button>
             </Col>
           </Row>   

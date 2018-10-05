@@ -17,7 +17,6 @@ class Nav extends Component {
 		title: PropTypes.string.isRequired,
     photo: PropTypes.string,
     email: PropTypes.string,
-		items: PropTypes.array
 	}
 //	Función de logouth
 	handleLogouth = () => {
@@ -29,13 +28,12 @@ class Nav extends Component {
 		const {
 			title,
 			photo,
-      // items,
       email,
 		} = this.props;
 
 		return (
-			<header className='Nav'>
-				<nav fixed= 'bool'>
+			<header className='Nav navbar-fixed'>
+				<nav>
 					<Row className='valign-wrapper'>
             <SideNav
             trigger={<a><i class="large material-icons col l1 offset-l1">dehaze</i></a>}
@@ -53,9 +51,9 @@ class Nav extends Component {
 
               <SideNavItem divider />
               <SideNavItem subheader> One Food Lover </SideNavItem>
-              <div className = 'exit-nav'>
+              {/* <div className = 'exit-nav'>
                 <a class="offset-s2 col s8 waves-effect waves-light btn red lighten-2 " onClick={this.handleLogouth}> <Link className = 'lime-text text-lighten-5 brown-nav-text' to = '/'>Salir</Link> </a>
-              </div>
+              </div> */}
 
             </SideNav>
 

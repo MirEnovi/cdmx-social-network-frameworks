@@ -5,12 +5,11 @@ import { Row, Col, Button } from 'react-materialize'; // importamos elementos de
 
 
 class NewComent extends Component {
-  // constructor(props){
-	// 	super(props)
-	// }
-	onChange = (e) =>{
-    // console.log(e.target.value);    
-		this.props.onInputChange(e.target.value)
+  constructor(props){
+		super(props)
+	}
+	onChange = (e) =>{    
+		this.props.onTextChange(e.target.value)
 	}
 	onSubmit =(e) => {
 		e.preventDefault();
@@ -18,14 +17,21 @@ class NewComent extends Component {
 	}
   render() {
     return (
-      <Row className= 'inputComent center-align'>
-          <Col offset='s2' s={8}>
-            <form onSubmit={this.onSubmit}>
-              <input placeholder= 'Escribe un Comentario' value={this.props.newComent} onChange={this.onChange}/>
-              <Button type='submit' waves='light' className= 'green lighten-2'> Publicar </Button>
-            </form>
-          </Col>
-      </Row>
+      <div className= 'row inputComent center-align'>
+        <form className='col s12 l8 offset-l4' onSubmit={this.onSubmit}>
+          <div className="input-field col s10 m6 offset-m2">
+            <textarea id="textarea1"
+                    className="materialize-textarea" 
+                    value={this.props.newComent} 
+                    onChange={this.onChange}>
+            </textarea>
+            <label for="textarea1">Escribe un Comentario</label>
+          </div>
+          <Button type='submit' waves='light' className= 'margin-button green lighten-2 col s2 l1'> <i class="material-icons">publish</i></Button>
+
+            {/* <input classname = 'col m5' placeholder= 'Escribe un Comentario' value={this.props.newComent} onChange={this.onChange}/> */}
+        </form>
+      </div>
     );
   }
 }
