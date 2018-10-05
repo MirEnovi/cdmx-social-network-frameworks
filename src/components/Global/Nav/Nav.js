@@ -32,7 +32,7 @@ class Nav extends Component {
 		} = this.props;
 
 		return (
-			<header className='Nav navbar-fixed'>
+			<header className='Nav'>
 				<nav>
 					<Row className='valign-wrapper'>
             <SideNav
@@ -51,9 +51,9 @@ class Nav extends Component {
 
               <SideNavItem divider />
               <SideNavItem subheader> One Food Lover </SideNavItem>
-              {/* <div className = 'exit-nav'>
+              <div className = 'exit-nav'>
                 <a class="offset-s2 col s8 waves-effect waves-light btn red lighten-2 " onClick={this.handleLogouth}> <Link className = 'lime-text text-lighten-5 brown-nav-text' to = '/'>Salir</Link> </a>
-              </div> */}
+              </div>
 
             </SideNav>
 
