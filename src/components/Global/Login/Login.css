@@ -17,9 +17,9 @@
   color: #b71c1c;
 }
 
-.indigo, .red {
-  width: 250px;
-  margin-top: 10px;
+.login-buttons {
+  /* width: 250px; */
+  margin-top: 20px;
 }
 
 
