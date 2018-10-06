@@ -6,10 +6,12 @@ import {Button, Col, Row} from 'react-materialize'; // importamos elementos de M
 import firebase from 'firebase'; // Importamos Firebase
 import { Firebase, db } from '../../../config/firebaseCredentials';
 
-
+import FormNewUser from '../FormNewUser/FormNewUser'
 
 import './Login.css'; // Importamos estilos
 import logo from '../../assets/taco.png'; // Importamos imagen logo
+import facebook from '../../assets/facebook.png';
+import google from '../../assets/google-plus.png'
 
 
 
@@ -40,13 +42,19 @@ class Login extends Component {
             <img src={logo} className="Login-logo" alt="logo" />
           </header>
           <div>
-          <Row className= 'flow-text '>
-            <Col s={12} m={6}>
-              <Button waves='light' className='indigo darken-4 ' onClick={this.props.facebook}>Facebook</Button>
+          <Row className= 'flow-text login-buttons col l8 '>
+            <Col s={12} m={4}>
+              {/* <Button waves='light' className='indigo darken-4 ' onClick={this.props.facebook}>
+                facebook
+              </Button> */}
+              <img src={facebook} alt='facebook' height='60' width='60' onClick={this.props.facebook}></img>
             </Col>
-
-            <Col s={12} m={6}>
-              <Button waves='light' className='red darken-4' onClick={this.props.google}>Google</Button>
+            <Col s={12} m={4}>
+              <FormNewUser/>
+            </Col>
+            <Col s={12} m={4}>
+              {/* <Button waves='light' className='red darken-4' onClick={this.props.google}>Google</Button> */}
+              <img src={google} alt='google' height='60' width='60' onClick={this.props.google}></img>
             </Col>
           </Row>   
           </div>
