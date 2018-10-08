@@ -7,11 +7,11 @@ class FooterC extends Component {
         return (
             <Footer
             moreLinks={
-            <a className='z-depth-3 brown-text text-darken-2 right' href="http://www.laboratoria.la/" > © 2018 Laboratoria Ciudad de México </a>
+            <a className='z-depth-1 orange-text text-darken-5 right' href="http://www.laboratoria.la/" > © 2018 Laboratoria Ciudad de México </a>
               }
-            className='example teal lighten-1 brown-text text-darken-1'>
-                <h5 className= 'center-align' > Mexican Food Lovers</h5>
-                <p >The Biggest Mexican Food Lovers Comunity.</p>
+            className='example brown darken-3'>
+                <h5 className= 'nav-shadow orange-text text-darken-5 center-align' > Mexican Food Lovers</h5>
+                <p className='nav-shadow orange-text text-darken-5'>The Biggest Mexican Food Lovers Comunity.</p>
             </Footer>
         )
     }
