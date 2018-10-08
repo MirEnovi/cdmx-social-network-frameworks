@@ -27,7 +27,7 @@ class NewComent extends Component {
             </textarea>
             <label for="textarea1">Escribe un Comentario</label>
           </div>
-          <Button type='submit' waves='light' className= 'margin-button green lighten-2 col s2 l1'> <i class="material-icons">publish</i></Button>
+          <Button type='submit' waves='light' className= 'margin-button   teal darken-1 col s2 l1'> <i class="material-icons">publish</i></Button>
 
             {/* <input classname = 'col m5' placeholder= 'Escribe un Comentario' value={this.props.newComent} onChange={this.onChange}/> */}
         </form>

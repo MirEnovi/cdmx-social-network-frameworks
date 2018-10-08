@@ -23,27 +23,26 @@
 }
 
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
 
 
 @media screen and (max-width: 980px){
   .Login-logo {
-    margin-top: 20px;
-    height: 180px;
+    height: 150px;
   }
 }
 
 @media screen and (max-width: 450px){
   .Login {
     width: 100%;
-    margin-top: 100px;
-    height: 63vh;
+    margin-top: 10px;
+    height: 75vh;
   }
   .Login-logo {
     height: 150px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
 }

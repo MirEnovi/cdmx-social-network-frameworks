@@ -42,21 +42,20 @@ class Login extends Component {
             <img src={logo} className="Login-logo" alt="logo" />
           </header>
           <div>
-          <Row className= 'flow-text login-buttons col l8 '>
-            <Col s={12} m={4}>
-              {/* <Button waves='light' className='indigo darken-4 ' onClick={this.props.facebook}>
-                facebook
-              </Button> */}
-              <img src={facebook} alt='facebook' height='60' width='60' onClick={this.props.facebook}></img>
-            </Col>
-            <Col s={12} m={4}>
-              <FormNewUser/>
-            </Col>
-            <Col s={12} m={4}>
-              {/* <Button waves='light' className='red darken-4' onClick={this.props.google}>Google</Button> */}
-              <img src={google} alt='google' height='60' width='60' onClick={this.props.google}></img>
-            </Col>
-          </Row>   
+            <Row>
+              <h5 className='center-align'>Inicia Sesión y a comer...</h5>
+            </Row>
+            <Row className= 'flow-text login-buttons col l8 '>
+              <Col s={12} m={4}>
+                <img src={facebook} alt='facebook' height='60' width='60' onClick={this.props.facebook}></img>
+              </Col>
+              <Col s={12} m={4}>
+                <FormNewUser/>
+              </Col>
+              <Col s={12} m={4}>
+                <img src={google} alt='google' height='60' width='60' onClick={this.props.google}></img>
+              </Col>
+            </Row>   
           </div>
         </div>
       );
